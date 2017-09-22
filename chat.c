@@ -10,13 +10,9 @@ int main(){
 FILE *fp;
 
 
-fp = fopen("test.txt", "r");
+fp = fopen("chat_data.txt", "a");
+ fprintf(fp, "This is testing for fprintf...\n");
+fclose(fp);
 
-  char time_sent[255];
-  char msg[255];
 
-  while( fgets(time_sent,255,(FILE*)fp)){
-     fgets(msg,255,(FILE*)fp);
-     printf("time: %s, msg: %s\n",time_sent,msg);
-   }
 }
