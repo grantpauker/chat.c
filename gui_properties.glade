@@ -2,10 +2,7 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkTextBuffer" id="textbuffer1">
-    <signal name="changed" handler="test" swapped="no"/>
-  </object>
-  <object class="GtkWindow" id="window_main">
+  <object class="GtkWindow" id="chat_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Temp Title Like A Boss</property>
     <signal name="activate-default" handler="test" swapped="no"/>
@@ -16,8 +13,8 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkButton" id="button">
-            <property name="label" translatable="yes">send</property>
+          <object class="GtkButton" id="chat_button">
+            <property name="label" translatable="yes">Send</property>
             <property name="width_request">68</property>
             <property name="height_request">28</property>
             <property name="visible">True</property>
@@ -31,20 +28,19 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="entry">
+          <object class="GtkEntry" id="chat_entry">
             <property name="width_request">373</property>
             <property name="height_request">28</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">Message to send...</property>
-            <signal name="key-press-event" handler="clicked" swapped="no"/>
           </object>
           <packing>
             <property name="y">222</property>
           </packing>
         </child>
         <child>
-          <object class="GtkScrolledWindow" id="scrolled_win">
+          <object class="GtkScrolledWindow" id="scrolled_window">
             <property name="width_request">440</property>
             <property name="height_request">221</property>
             <property name="visible">True</property>
@@ -52,7 +48,7 @@
             <property name="shadow_type">in</property>
             <signal name="show" handler="test" swapped="no"/>
             <child>
-              <object class="GtkTextView" id="textview">
+              <object class="GtkTextView" id="chat_view">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="editable">False</property>
@@ -62,6 +58,54 @@
           </object>
           <packing>
             <property name="y">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="name_window">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkEntry" id="name_entry">
+            <property name="width_request">83</property>
+            <property name="height_request">28</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">11</property>
+            <property name="y">81</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="name_button">
+            <property name="label" translatable="yes">ok</property>
+            <property name="width_request">68</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="picked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">184</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">215</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Please enter a name and press ok</property>
+          </object>
+          <packing>
+            <property name="x">24</property>
           </packing>
         </child>
       </object>
