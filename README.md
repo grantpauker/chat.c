@@ -1,2 +1,2 @@
 A chat application using glade and gtk+
-![](/chat.png | width=100)
+![](/chat.png){:height="700px" width="400px"}
